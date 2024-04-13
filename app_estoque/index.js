@@ -9,10 +9,6 @@ app.get('/', function(req, res) {
 app.get('/adicionar/:id/:nome/:qtd', function (req, res) {
     const { id, nome, qtd } = req.params;
     
-    // let id = req.params.id;
-    // let nome = req.params.nome;
-    // let qtd = req.params.qtd;
-    
     try {
         let p = estoque.criarProduto(id, nome, qtd);
         estoque.adicionarProduto(p);
@@ -46,9 +42,22 @@ app.get('/buscar/:id', function(req, res) {
     }
 });
 
+// Simulando uma atualização PUT utilizando a chamada HTTP GET
+app.get('/editar/:id/:qtd', function(req, res) {
+    const { id, qtd } = req.params;
+
+    let mensagem = estoque.editarProduto(id, qtd);
+
+    if (mensagem === "Produto atualizado com sucesso!") {
+        res.status(200).send(mensagem);
+    } else {
+        res.status(404).send(mensagem);
+    }
+});
 
 app.get('/remover/:id', function (req, res) {
     let id = req.params.id;
+
     try {
         estoque.removerProduto(id);
         res.status(200).send(`Produto com ID: ${id} removido com sucesso.`);

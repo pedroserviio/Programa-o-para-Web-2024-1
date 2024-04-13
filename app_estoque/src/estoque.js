@@ -6,11 +6,19 @@ function criarProduto(id, nome, qtd) {
         nome: nome,
         qtd: qtd
     }
+
     return p;
 }
 
 function adicionarProduto(p) {
-    produtos.push(p);
+    const produtoExistente = produtos.find(produto => produto.id === p.id);
+    
+    // Se o produto já existir, exibir uma mensagem de erro
+    if (produtoExistente) {
+        console.error('Já existe um produto com o mesmo ID.');
+    } else {
+        produtos.push(p);
+    }
 }
 
 function listarProdutos() {
@@ -26,11 +34,20 @@ function buscarProduto(id) {
     }
 }
 
+function editarProduto(id, qtd) {
+    const produtoIndex = produtos.findIndex(produto => produto.id === id);
+
+    if (produtoIndex !== -1) {
+        produtos[produtoIndex].qtd = qtd;
+
+        return "Produto atualizado com sucesso!";
+    } else {
+        return "Produto não encontrado";
+    }
+
+}
+
 function removerProduto(id) {
-    // produtos = produtos.filter((p) => {
-    //     let x = p.id != id;
-    //     return x;
-    // });
     try {
         produtos.pop(id);
     } catch {
@@ -43,5 +60,6 @@ module.exports = {
     adicionarProduto,
     listarProdutos,
     buscarProduto,
+    editarProduto,
     removerProduto
 };
