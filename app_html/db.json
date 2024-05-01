@@ -1,0 +1,26 @@
+{
+    "agendamentos": [
+        {
+            "nome": "Pedro Victor Servio de Melo",
+            "telefone": "61999949929",
+            "endereco": {
+                "cep": "72430-109",
+                "logradouro": "Quadra 1 Conjunto I",
+                "uf": "DF",
+                "cidade": "Brasília"
+            },
+            "dt_agendamento": "2024-05-01"
+        },
+        {
+            "nome": "Maria Eduarda Alves Nunes",
+            "telefone": "6199999999",
+            "endereco": {
+                "cep": "72430109",
+                "logradouro": "Quadra 1 Conjunto I",
+                "uf": "DF",
+                "cidade": "Brasília"
+            },
+            "dt_agendamento": "2024-06-03"
+        }
+    ]
+}

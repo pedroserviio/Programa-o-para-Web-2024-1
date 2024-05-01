@@ -1,6 +1,26 @@
-.mg-top-20 {
-    margin-top: 20px;
+body {
+    background-color: #116699!important;
 }
-.mg-left-20 {
-    margin-right: 20px;
+.container {
+    border-radius: 0 0 50px 50px;
+}
+.btnCadastro {
+    background-color: #116699!important;
+    color: white!important;
+    border-color: #116699!important;
+}
+.btnCadastro:hover {
+    background-color: #2078af!important;
+}
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    color: white;
+    background-color: #116699;
+}
+th, td {
+    padding: 15px!important;
+}
+th {
+    background-color: #032c46!important;
 }
