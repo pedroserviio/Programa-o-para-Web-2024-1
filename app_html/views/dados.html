@@ -27,7 +27,6 @@
         </div>
 
         <script>
-            // Função para fazer a requisição à API e criar a tabela
             async function fetchAndDisplayData() {
                 try {
                     const response = await fetch('/dados/listar');
@@ -35,7 +34,6 @@
     
                     const tableBody = document.getElementById('table-body');
     
-                    // Limpa o conteúdo anterior da tabela
                     tableBody.innerHTML = '';
     
                     // Popula a tabela com os dados dos agendamentos
@@ -54,7 +52,6 @@
                 }
             }
     
-            // Chama a função para buscar e exibir os dados quando a página carrega
             window.onload = fetchAndDisplayData;
         </script>
     </body>

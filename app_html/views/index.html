@@ -14,8 +14,8 @@
     <div class="container">
       <div class="row">
         <div class="col-12 p-5 text-center text-white bg-dark cadastro">
-          <h1>Cadastro</h1>
-          	<form class="row g-3" id="agendarForm">
+          <h1>Agendamento</h1>
+          	<form class="row g-3" id="agendarForm" action="/dados/cadastrar" method="POST">
 				<div class="col-md-6">
 					<label for="inputNome" class="form-label">Nome</label>
 					<input type="text" class="form-control" id="inputNome" placeholder="Nome" required/>
@@ -47,11 +47,11 @@
 					<input type="date" class="form-control" id="inputData" required/>
 				</div>
 				<div class="col-12 pt-3">
-					<button type="submit" class="btn btnCadastro">Cadastrar</button>
+					<button class="btn btnCadastro">Agendar</button>
 				</div>
           	</form>
         </div>
-		<button style="margin-top: 20px;" type="button" class="btn btn-dark">Ver Agendamentos</button>
+		<button style="margin-top: 20px;" type="button" class="btn btn-dark" id="btnAgendamento">Ver Agendamentos</button>
       </div>
     </div>
 

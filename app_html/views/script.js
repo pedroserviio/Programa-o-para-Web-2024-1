@@ -105,3 +105,8 @@ agendarForm.addEventListener("submit", function(event) {
         });
     }
 });
+
+let btnAgendamento = document.getElementById('btnAgendamento');
+btnAgendamento.addEventListener('click', function() {
+    window.location.href = '/dados';
+});
